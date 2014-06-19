@@ -22,7 +22,7 @@
 ##    Paul Romanczyk
 ##
 ## PUBLIC REPOSITORY:
-##    https://github.com/pavdpr/rprog-004-assignment2
+##    https://github.com/pavdpr/ProgrammingAssignment2
 ##
 ## SAMPLE USAGE:
 ##    m <- makeCacheMatrix( matrix( c( 1, 3, 3, 1 ), 2, 2 ) )
