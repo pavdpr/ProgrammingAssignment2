@@ -34,7 +34,11 @@
 ##
 ## TODO:
 ##    
-## KNOWN BUGS:
+## KNOWN ISSUES:
+##    There is no error checking, specifically 
+##    -that the matrix is non-singular
+##    -that the matrix has size 1x1 or greater
+##    -that the matrix is square
 ##
 ## REFERENCES:
 ##    [1] https://class.coursera.org/rprog-004/
