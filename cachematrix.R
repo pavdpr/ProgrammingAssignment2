@@ -17,6 +17,8 @@
 ##    - Initial Version
 ##    2014-06-20:
 ##    - Finished up documentation
+##    2014-07-17:
+##    - Passed any extra parameters to solve in cacheSolve
 ##
 ## AUTHORS:
 ##    Paul Romanczyk
@@ -125,21 +127,18 @@ makeCacheMatrix <- function( x = matrix() ) {
 ##    return the inverse.
 ##
 ## INPUTS:
-##    x: a cached matrix object
-##    ...: not really sure why this is needed, it will not be used in current 
-##      implementation
+##    x: a cached matrix object.
+##    ...: Any additional parameters to pass to the solve function.
 ##
 ## OUTPUTS:
-##    the inverse of x
+##    the inverse of x.
 ##
 ## MODIFIES:
-##    inv: if the inverse of x is not cached, it will set it
+##    inv: if the inverse of x is not cached, it will set it.
 ##
 ################################################################################
 cacheSolve <- function( x, ... ) {
   ## Return a matrix that is the inverse of 'x'
-  
-  # HMM..., I never make use of the ..., should I?
   
   # try to get the inverse of x
   inv <- x$getInverse()
@@ -161,8 +160,8 @@ cacheSolve <- function( x, ... ) {
   # get the matrix x
   data <- x$get()
   
-  # compute the inverse
-  inv <- solve( data )
+  # compute the inverse, pass along any extra parameters
+  inv <- solve( data, ... )
   
   # cache the inverse
   x$setInverse( inv )

@@ -1,5 +1,6 @@
 # R things
 .Rhistory
+.RData
 
 # mac things
 .DS_Store
